@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blogs</title>
+    <style>
+        html, body {
+            height: 200%;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+        }
+        .main-wrapper {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .search-container {
+            max-width: 800px;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .search-container input[type="text"] {
+            width: 80%;
+            padding: 10px;
+            margin: 10px 0;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+        .search-container input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        .search-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        .blog-list {
+            max-width: 800px;
+            margin: 20px auto;
+        }
+        .blog-post {
+            border-bottom: 1px solid #ccc;
+            padding: 10px 0;
+        }
+        footer {
+            text-align: center;
+            padding:0;
+            background-color: #f8f9fa;
+        }
+    </style>
+    <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
+</head>
+<body>
+    <div class="search-container">
+        <form id="search-form">
+            <input type="text" id="search-input" placeholder="Search for blogs...">
+            <input type="submit" value="Search">
+        </form>
+    </div>
+    <div class="item mb-5;">
+        <div class="media">
+            <img class="mr-3 img-fluid post-thumb d-none d-md-flex" src="assets/images/blog/blog-post-thumb-7.jpg" alt="image" style="height: 120px; ">
+            <div class="media-body">
+                <h3 class="title mb-1"><a href="blog-post.html">Kya Har Har MODI Ghar Ghar Modi</a></h3>
+                <div class="meta mb-1"><span class="date">Published in June</span></div>
+                <div class="intro">Sub heading apni website ki</div>
+                <a class="more-link" href="#">Read more &rarr;</a>
+            </div><!--//media-body-->
+        </div><!--//media-->
+    </div><!--//item-->
+</body>
+</html>
