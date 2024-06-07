@@ -1,6 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"> 
-
+<html lang="en">
 <head>
     <title>Collegers | Astra Knight</title>
     
@@ -9,116 +8,193 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon_processed.ico"> 
-	<link rel="stylesheet" href="style.css">
-    
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon_processed.ico">
+    <link rel="stylesheet" href="styless.css">
     <!-- FontAwesome JS-->
     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
     
-    <!-- Plugin CSS -->
-    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.14.2/styles/monokai-sublime.min.css">
-    
-    <!-- Theme CSS -->  
+    <!-- Theme CSS -->
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-    
 
-</head> 
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .blog-post {
+            display: flex;
+            align-items: center;
+            background: #f9f9f9;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            padding: 20px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+        .blog-post:hover {
+            transform: translateY(-5px);
+        }
+        .blog-post img {
+            width: 100px;
+            height: 100px;
+            margin-right: 20px;
+            border-radius: 8px;
+            object-fit: cover;
+        }
+        .blog-post-content {
+            flex: 1;
+        }
+        .blog-post-content h3 {
+            margin-top: 0;
+            font-size: 1.5rem;
+            color: #333;
+        }
+        .blog-post-content p {
+            margin: 10px 0;
+            color: #555;
+        }
+        .blog-post-content a {
+            color: #0ae01c;
+            text-decoration: none;
+        }
+        .blog-post-content a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #search-form {
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+        }
+        #search-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        #search-form button {
+            padding: 10px;
+            background-color: #0ae01c;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            color: white;
+            cursor: pointer;
+        }
+        #search-form button:hover {
+            background-color: #088f12;
+        }
+    </style>
+</head>
+
 <body>
- 
-    <header class="header text-center">	    
-	    
-        
-	    <nav class="navbar navbar-expand-lg navbar-dark" >
-           
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-				</button>
+    <header class="header text-center">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-			<div id="navigation" class="collapse navbar-collapse flex-column" >
-				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image" >			
-					
-					<div class="bio mb-3"> Hi , We are Collegers!<br>We share the latest news, tips, and stories from the world. Join us for updates, advice, and inspiration. Let's make the most of our world experience together!<br><a href="about.html">Find out more about us</a></div><!--//bio-->
-					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="https://www.instagram.com/collegers.in/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://discord.gg/8FFrGAMH"><i class="fab fa-discord fa-fw" target="_blank"></i></a></li>
-			            <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61560351482389" target="_blank"><i class="fab fa-facebook fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://x.com/CollegersBlog"><i class="fab fa-twitter fa-fw" target="_blank"></i></a></li>
-			        </ul><!--//social-list-->
-			        <hr> 
-				</div><!--//profile-section-->
-				
-				<ul class="navbar-nav flex-column text-left">
-					<li class="nav-item active">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Us</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="contact_us.html"><i class="fas fa-user fa-fw mr-2"></i>Contact Us</a>
-					</li>
-				</ul>
+            <div id="navigation" class="collapse navbar-collapse flex-column">
+                <div class="profile-section pt-3 pt-lg-0">
+                    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image">
 
-			</header>
+                    <div class="bio mb-3"> Hi, We are Collegers!<br>We share the latest news, tips, and stories from the world. Join us for updates, advice, and inspiration. Let's make the most of our world experience together!<br><a href="about.html">Find out more about us</a></div><!--//bio-->
+                    <ul class="social-list list-inline py-3 mx-auto">
+                        <li class="list-inline-item"><a href="https://www.instagram.com/collegers.in/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://discord.gg/8FFrGAMH" target="_blank"><i class="fab fa-discord fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61560351482389" target="_blank"><i class="fab fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://x.com/CollegersBlog" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+                    </ul><!--//social-list-->
+                    <hr>
+                </div><!--//profile-section-->
 
-			<div class="main-wrapper">
-				<section class="cta-section theme-bg-light py-5">
-					<!DOCTYPE html>
-
-    <header>
-        <h1>Contact Us</h1>
+                <ul class="navbar-nav flex-column text-left">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html"><i class="fas fa-user fa-fw mr-2"></i>Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
-    <div class="container">
-        <div class="contact-form">
-            <h2>Get in Touch</h2>
-            <form action="https://api.web3forms.com/submit" method="POST">
-				<input type="hidden" name="access_key" value="0fee42f2-e13c-41cf-a078-5bf4aed43860">
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" required>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
-
-                <label for="message">Message</label>
-                <textarea id="message" name="message" required></textarea>
-				<div class="h-captcha" data-captcha="true"></div>
-                <button type="submit">Submit</button>
+    <div class="main-wrapper">
+        <div class="search-bar">
+            <form id="search-form">
+                <input type="text" id="search-input" placeholder="Search blog posts...">
             </form>
         </div>
+
+        <section class="cta-section theme-bg-light py-5">
+            <div class="container text-center">
+                <h2 class="heading">Collegers - A Blog Site Made For Millions of lives</h2>
+                <div class="intro">We try to give news ASAP.</div>
+            </div><!--//container-->
+        </section>
+
+        <section class="content container">
+            <div class="blog-post">
+                <img src="assets/images/blog/favicon.jpg" alt="Blog Post 1">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/collegers_blog.html" target="_blank">All about Collegers</a></h3>
+                    <p>All about Collegers.in their History, Vision, Aim, Goal, Slogan...</p>
+                    <a href="Blogs/collegers_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="assets/images/blog/lok_sabha1.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/Lok_Sabha.html" target="_blank">Lok Sabha Election 2024: A Closer Look at the Results</a></h3>
+                    <p>The much-anticipated 2024 Lok Sabha elections have concluded, marking another pivotal moment in India's democratic journey.</p>
+                    <a href="Blogs/Lok_Sabha.html" target="_blank">Read More</a>
+                </div>
+            </div>
+        </section>
     </div>
-    
 
+    <footer class="footer">
+        <p>&copy; 2024 Collegers. All rights reserved.</p>
+    </footer>
 
-				</section>
-				<footer>
-					<p>&copy; 2024 Collegers. All rights reserved.</p>
-				</footer>
-			<!-- Javascript -->          
-			<script src="assets/plugins/jquery-3.3.1.min.js"></script>
-			<script src="assets/plugins/popper.min.js"></script> 
-			<script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-		
-			<!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-			<script src="assets/js/demo/style-switcher.js"></script>     
-			
-			<script>
-				document.getElementById('search-form').addEventListener('submit', function(event) {
-					event.preventDefault();
-					const searchQuery = document.getElementById('search-input').value.toLowerCase();
-					const blogPosts = document.querySelectorAll('.blog-post');
-					
-					blogPosts.forEach(post => {
-						const title = post.getAttribute('data-title').toLowerCase();
-						if (title.includes(searchQuery)) {
-							post.style.display = 'block';
-						} else {
-							post.style.display = 'none';
-						}
-					});
-				});
-			</script>
+    <!-- Javascript -->
+    <script src="assets/plugins/jquery-3.3.1.min.js"></script>
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+
+    <script>
+        document.getElementById('search-input').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
+            const blogPosts = document.querySelectorAll('.blog-post');
+            
+            blogPosts.forEach(post => {
+                const title = post.querySelector('.blog-post-content h3').textContent.toLowerCase();
+                const description = post.querySelector('.blog-post-content p').textContent.toLowerCase();
+                
+                if (title.includes(searchQuery) || description.includes(searchQuery)) {
+                    post.style.display = 'flex';
+                } else {
+                    post.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </body>
-</html> 
-
+</html>

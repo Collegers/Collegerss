@@ -10,7 +10,7 @@
     <meta name="description" content="Blog Template">
     <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
     <link rel="shortcut icon" href="favicon_processed.ico"> 
-    <link rel="stylesheet" href="styless.css">
+    <link rel="stylesheet" href="styless.css"> <!-- Ensure this is correctly linked -->
     <!-- FontAwesome JS-->
     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
     
@@ -69,6 +69,34 @@
             text-align: center;
             padding: 10px 0;
         }
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+        #search-form {
+            display: flex;
+            width: 100%;
+            max-width: 500px;
+        }
+        #search-input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px 0 0 5px;
+            font-size: 1rem;
+        }
+        #search-form button {
+            padding: 10px;
+            background-color: #0ae01c;
+            border: none;
+            border-radius: 0 5px 5px 0;
+            color: white;
+            cursor: pointer;
+        }
+        #search-form button:hover {
+            background-color: #088f12;
+        }
     </style>
 </head> 
 
@@ -107,42 +135,42 @@
 			</div>
 		</nav>
     </header>
-    
+
     <div class="main-wrapper">
-        <section class="cta-section theme-bg-light py-5">
-            <div class="container text-center">
-                <h2 class="heading">Collegers - A Blog Site Made For Millions of lives</h2>
-                <div class="intro">We try to give news ASAP.</div>
-            </div><!--//container-->
-        </section>
         
-        <section class="search-bar container text-center py-4">
+
+	    <section class="cta-section theme-bg-light py-5">
+		    <div class="container text-center">
+			    <h2 class="heading">Collegers - A Blog Site Made For Millions of lives</h2>
+			    <div class="intro">We try to give news ASAP.</div>
+		    </div><!--//container-->
+	    </section>
+	    
+        <div class="search-bar">
             <form id="search-form">
-                <input id="search-input" type="text" placeholder="Search blog posts...">
+                <input type="text" id="search-input" placeholder="Search blog posts...">
                 <button type="submit">Search</button>
             </form>
-        </section>
-        
-        <section class="content container">
-            <div class="blog-post">
-                <img src="assets/images/blog/favicon.jpg" alt="Blog Post 1">
-                <div class="blog-post-content">
-                    <h3><a href="Blogs/collegers_blog.html" target="_blank">All about Collegers</a></h3>
-                    <p>All about Collegers.in their History, Vision, Aim, Goal, Slogan...</p>
-                    <a href="Blogs/collegers_blog.html" target="_blank">Read More</a>
-                </div>
-            </div>
-            <div class="blog-post">
-                <img src="assets/images/blog/lok_sabha1.jpg" alt="Blog Post 2">
-                <div class="blog-post-content">
-                    <h3><a href="Blogs/Lok_Sabha.html" target="_blank">Lok Sabha Election 2024: A Closer Look at the Results</a></h3>
-                    <p>The much-anticipated 2024 Lok Sabha elections have concluded, marking another pivotal moment in India's democratic journey.</p>
-                    <a href="Blogs/Lok_Sabha.html" target="_blank">Read More</a>
-                </div>
-            </div>
-        </section>
-    </div>
-    
+        </div>
+	    <section class="content container">
+	        <div class="blog-post">
+	            <img src="assets/images/blog/favicon.jpg" alt="Blog Post 1">
+	            <div class="blog-post-content">
+	                <h3><a href="Blogs/collegers_blog.html" target="_blank">All about Collegers</a></h3>
+	                <p>All about Collegers.in their History, Vision, Aim, Goal, Slogan...</p>
+	                <a href="Blogs/collegers_blog.html" target="_blank">Read More</a>
+	            </div>
+	        </div>
+	        <div class="blog-post">
+	            <img src="assets/images/blog/lok_sabha1.jpg" alt="Blog Post 2">
+	            <div class="blog-post-content">
+	                <h3><a href="Blogs/Lok_Sabha.html" target="_blank">Lok Sabha Election 2024: A Closer Look at the Results</a></h3>
+	                <p>The much-anticipated 2024 Lok Sabha elections have concluded, marking another pivotal moment in India's democratic journey.</p>
+	                <a href="Blogs/Lok_Sabha.html" target="_blank">Read More</a>
+	            </div>
+	        </div>
+	    </section>
+	</div>
 
     <footer class="footer">
         <p>&copy; 2024 Collegers. All rights reserved.</p>
@@ -157,14 +185,15 @@
     <script src="assets/js/demo/style-switcher.js"></script>     
     
     <script>
-        document.getElementById('search-form').addEventListener('submit', function(event) {
-            event.preventDefault();
-            const searchQuery = document.getElementById('search-input').value.toLowerCase();
+        document.getElementById('search-input').addEventListener('input', function() {
+            const searchQuery = this.value.toLowerCase();
             const blogPosts = document.querySelectorAll('.blog-post');
             
             blogPosts.forEach(post => {
-                const title = post.querySelector('.blog-post-content h3').innerText.toLowerCase();
-                if (title.includes(searchQuery)) {
+                const title = post.querySelector('.blog-post-content h3').textContent.toLowerCase();
+                const description = post.querySelector('.blog-post-content p').textContent.toLowerCase();
+                
+                if (title.includes(searchQuery) || description.includes(searchQuery)) {
                     post.style.display = 'flex';
                 } else {
                     post.style.display = 'none';
