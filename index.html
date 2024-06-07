@@ -18,52 +18,33 @@
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
 
     <style>
-        html, body {
-            height: 100%;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-        }
-        .main-wrapper {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-        }
-        .search-container {
-            max-width: 400px;
-            margin: 20px auto;
-            text-align: center;
-        }
-        .search-container input[type="text"] {
-            width: 80%;
-            padding: 10px;
-            margin: 10px 0;
-            border-radius: 5px;
-            border: 1px solid #ccc;
-        }
-        .search-container input[type="submit"] {
-            padding: 10px 20px;
-            background-color: #007BFF;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        .search-container input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-        .blog-list {
-            max-width: 800px;
-            margin: 20px auto;
-        }
         .blog-post {
-            border-bottom: 1px solid #ccc;
-            padding: 10px 0;
+            display: flex;
+            margin-bottom: 10px;
+            border-bottom: 2px solid #00f514;
+            padding-bottom: 20px;
+            max-width: 6000px; /* Adjust width to fit more content */
         }
-        footer {
+        .blog-post img {
+            width: 100px; /* Reduce image size */
+            height: 100px;
+            margin-right: 15px;
+        }
+        .blog-post-content {
+            max-width: 800px; /* Adjust content width */
+        }
+        .blog-post-content h3 {
+            margin-top: 0;
+            font-size: 1.1rem; /* Reduce font size */
+        }
+        .footer {
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+            background-color: gray; 
+            color: white; 
             text-align: center;
-            padding:0;
-            background-color: #f8f9fa;
+            padding: 10px 0;
         }
     </style>
 </head> 
@@ -119,52 +100,29 @@
 		    </div><!--//container-->
 	    </section>
 	    
-	    
-		<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-</head>
-<body>
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Website</title>
-</head>
-<body>
-    <nav style="background-color: #333; padding: 10px 0;">
-        <ul style="list-style: none; margin: 0; padding: 0; display: flex; justify-content: center;">
-            <li style="margin: 0 15px;">
-                <a href="blogs.html" target="_blank" style="color: white; text-decoration: none; padding: 8px 16px; display: block;">Blogs</a>
-            </li>
-            <li style="margin: 0 15px;">
-                <a href="stories.html" target="_blank" style="color: white; text-decoration: none; padding: 8px 16px; display: block;">Personal Stories</a>
-            </li>
-        </ul>
-    </nav>
-</body>
-</html>
+	    <section class="content container">
+	        <div class="blog-post">
+	            <img src="assets/images/blog/favicon.jpg" alt="Blog Post 1">
+	            <div class="blog-post-content">
+	                <h3><a href="Blogs/collegers_blog.html" target="_blank">All about Collegers</a></h3>
+	                <p>All about Collegers.in their History, Vision, Aim, Goal, Slogan...</p>
+	                <a href="Blogs/collegers_blog.html" target="_blank">Read More</a>
+	            </div>
+	        </div>
+	        <div class="blog-post">
+	            <img src="assets/images/blog/lok_sabha1.jpg" alt="Blog Post 2">
+	            <div class="blog-post-content">
+	                <h3><a href="Blogs/Lok_Sabha.html" target="_blank">Lok Sabha Election 2024: A Closer Look at the Results</a></h3>
+	                <p>The much-anticipated 2024 Lok Sabha elections have concluded, marking another pivotal moment in India's democratic journey.</p>
+	                <a href="Blogs/Lok_Sabha.html" target="_blank">Read More</a>
+	            </div>
+	        </div>
+	    </section>
+	</div>
 
-</body>
-</html>
-
-        
-		<div class="content">
-			<!-- Dynamic content will be loaded here -->
-		</div>
-        <footer style="position:fixed; bottom:0; width:100%; background-color:gray; color:white; text-align:center;">
-            <p>&copy; 2024 Collegers. All rights reserved.</p>
-        </footer>
-        
-        
-        
-    
-					</section>
-					
+    <footer class="footer">
+        <p>&copy; 2024 Collegers. All rights reserved.</p>
+    </footer>
 
     <!-- Javascript -->          
     <script src="assets/plugins/jquery-3.3.1.min.js"></script>
@@ -181,9 +139,9 @@
             const blogPosts = document.querySelectorAll('.blog-post');
             
             blogPosts.forEach(post => {
-                const title = post.getAttribute('data-title').toLowerCase();
+                const title = post.querySelector('.blog-post-content h3').innerText.toLowerCase();
                 if (title.includes(searchQuery)) {
-                    post.style.display = 'block';
+                    post.style.display = 'flex';
                 } else {
                     post.style.display = 'none';
                 }
