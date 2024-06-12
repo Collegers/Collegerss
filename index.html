@@ -1,57 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en">
 <head>
     <title>Collegers | Astra Knight</title>
     <link rel="icon" type="image/x-icon" href="favicon_processed.ico">
-    
-    <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Blog Template">
-    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">    
-    <link rel="shortcut icon" href="favicon_processed.ico"> 
-    <link rel="stylesheet" href="styless.css"> <!-- Ensure this is correctly linked -->
-    <!-- FontAwesome JS-->
+    <meta name="author" content="Xiaoying Riley at 3rd Wave Media">
+    <link rel="shortcut icon" href="favicon_processed.ico">
+    <link rel="stylesheet" href="styless.css">
     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
-    
-    <!-- Theme CSS -->  
     <link id="theme-style" rel="stylesheet" href="assets/css/theme-1.css">
-
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My GitHub Page</title>
-    <!-- Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V7G7R3BZM1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'UA-XXXXXXXXX-X');
-    </script>
-    <!-- End Google Analytics -->
-
-    <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-16599712875">
-</script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-16599712875');
-</script>
-
-
-
-
     <style>
         body {
             font-family: Arial, sans-serif;
         }
         .blog-post {
-            display: flex;
+            display: none;
             align-items: center;
             background: #f9f9f9;
             border-radius: 8px;
@@ -90,11 +56,11 @@
             text-decoration: underline;
         }
         .footer {
-            position: fixed; 
-            bottom: 0; 
-            width: 100%; 
-            background-color: gray; 
-            color: white; 
+            
+            bottom: 0;
+            width: 100%;
+            background-color: gray;
+            color: white;
             text-align: center;
             padding: 10px 0;
         }
@@ -126,166 +92,198 @@
         #search-form button:hover {
             background-color: #088f12;
         }
+        .navigation-buttons {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .navigation-buttons button {
+            padding: 10px 20px;
+            background-color: #0ae01c;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            cursor: pointer;
+            font-size: 1rem;
+            margin: 0 10px; /* Add margin to create space between buttons */
+        }
+        .navigation-buttons button:hover {
+            background-color: #088f12;
+        }
     </style>
-</head> 
-
+</head>
 <body>
-    <header class="header text-center">	    
-	    <nav class="navbar navbar-expand-lg navbar-dark">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-				<span class="navbar-toggler-icon"></span>
-			</button>
-
-			<div id="navigation" class="collapse navbar-collapse flex-column">
-				<div class="profile-section pt-3 pt-lg-0">
-				    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image">			
-					
-					<div class="bio mb-3"> Hi, We are Collegers!<br>We share the latest news, tips, and stories from the world. Join us for updates, advice, and inspiration. Let's make the most of our world experience together!<br><a href="about.html">Find out more about us</a></div><!--//bio-->
-					<ul class="social-list list-inline py-3 mx-auto">
-			            <li class="list-inline-item"><a href="https://www.instagram.com/collegers.in/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://discord.gg/8FFrGAMH" target="_blank"><i class="fab fa-discord fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61560351482389" target="_blank"><i class="fab fa-facebook fa-fw"></i></a></li>
-			            <li class="list-inline-item"><a href="https://x.com/CollegersBlog" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
-			        </ul><!--//social-list-->
-			        <hr> 
-				</div><!--//profile-section-->
-				
-				<ul class="navbar-nav flex-column text-left">
-					<li class="nav-item active">
-					    <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Us</a>
-					</li>
-					<li class="nav-item">
-					    <a class="nav-link" href="contact_us.html"><i class="fas fa-user fa-fw mr-2"></i>Contact Us</a>
-					</li>
-				</ul>
-			</div>
-		</nav>
+    <header class="header text-center">
+        <nav class="navbar navbar-expand-lg navbar-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div id="navigation" class="collapse navbar-collapse flex-column">
+                <div class="profile-section pt-3 pt-lg-0">
+                    <img class="profile-image mb-3 rounded-circle mx-auto" src="assets/images/profile.png" alt="image">
+                    <div class="bio mb-3"> Hi, We are Collegers!<br>We share the latest news, tips, and stories from the world. Join us for updates, advice, and inspiration. Let's make the most of our world experience together!<br><a href="about.html">Find out more about us</a></div>
+                    <ul class="social-list list-inline py-3 mx-auto">
+                        <li class="list-inline-item"><a href="https://www.instagram.com/collegers.in/" target="_blank"><i class="fab fa-instagram fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://discord.gg/8FFrGAMH" target="_blank"><i class="fab fa-discord fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://www.facebook.com/profile.php?id=61560351482389" target="_blank"><i class="fab fa-facebook fa-fw"></i></a></li>
+                        <li class="list-inline-item"><a href="https://x.com/CollegersBlog" target="_blank"><i class="fab fa-twitter fa-fw"></i></a></li>
+                    </ul>
+                    <hr>
+                </div>
+                <ul class="navbar-nav flex-column text-left">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home fa-fw mr-2"></i>Blog Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.html"><i class="fas fa-user fa-fw mr-2"></i>About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="contact_us.html"><i class="fas fa-user fa-fw mr-2"></i>Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
     </header>
 
     <div class="main-wrapper">
-        
-
-	    <section class="cta-section theme-bg-light py-5">
-		    <div class="container text-center">
-			    <h2 class="heading">Collegers - A Blog Site Made For Millions of lives</h2>
-			    <div class="intro">We try to give news ASAP.</div>
-		    </div><!--//container-->
-	    </section>
-	    
+        <section class="cta-section theme-bg-light py-5">
+            <div class="container text-center">
+                <h2 class="heading">Collegers - A Blog Site Made For Millions of lives</h2>
+                <div class="intro">We try to give news ASAP.</div>
+            </div>
+        </section>
         <div class="search-bar">
             <form id="search-form">
                 <input type="text" id="search-input" placeholder="Search blog posts...">
                 <button type="submit">Search</button>
             </form>
         </div>
-	    <section class="content container">
+        <section class="content container">
             <div class="blog-post">
-	            <img src="assets/images/blog/iphone_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/iphone_blog.html" target="_blank">iOS 18: Making the iPhone More Personal, Capable, and Intelligent Than Ever</a></h3>
-	                <p>All you need to know about the latest i phone</p>
-	                <a href="Blogs/iphone_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/iphone_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/iphone_blog.html" target="_blank">iOS 18: Making the iPhone More Personal, Capable, and Intelligent Than Ever</a></h3>
+                    <p>All you need to know about the latest i phone</p>
+                    <a href="Blogs/iphone_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/cabinet_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/cabinet_blog.html" target="_blank">Modi 3.0: New Cabinet Ministers and Their Portfolios</a></h3>
-	                <p>Know all about which minister have which responsibility</p>
-	                <a href="Blogs/cabinet_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/cabinet_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/cabinet_blog.html" target="_blank">Modi 3.0: New Cabinet Ministers and Their Portfolios</a></h3>
+                    <p>Know all about which minister have which responsibility</p>
+                    <a href="Blogs/cabinet_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/reasi_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/reasi_blog.html" target="_blank">The Hypocrisy of Celebrity Activism: "All Eyes on Rafah" vs. "All Eyes on Reasi"</a></h3>
-	                <p>Its your choice who you support but support who actually needs it.</p>
-	                <a href="Blogs/reasi_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/reasi_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/reasi_blog.html" target="_blank">The Hypocrisy of Celebrity Activism: "All Eyes on Rafah" vs. "All Eyes on Reasi"</a></h3>
+                    <p>Its your choice who you support but support who actually needs it.</p>
+                    <a href="Blogs/reasi_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/attack_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/attack_blog.html" target="_blank">Tragedy in Reasi: Terrorist Attack Claims 10 Lives, Leaves 33 Injured</a></h3>
-	                <p>India needs a proper answer from our PM</p>
-	                <a href="Blogs/attack_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/attack_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/attack_blog.html" target="_blank">Tragedy in Reasi: Terrorist Attack Claims 10 Lives, Leaves 33 Injured</a></h3>
+                    <p>India needs a proper answer from our PM</p>
+                    <a href="Blogs/attack_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/medal_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/medal_blog.html" target="_blank">Puja Tomar: The Pride of India in Women's MMA</a></h3>
-	                <p>Know all about the today's trending topic</p>
-	                <a href="Blogs/medal_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/medal_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/medal_blog.html" target="_blank">Puja Tomar: The Pride of India in Women's MMA</a></h3>
+                    <p>Know all about the today's trending topic</p>
+                    <a href="Blogs/medal_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/oath_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/oath_blog.html" target="_blank">Narendra Modi to Take Oath for Third Term as Prime Minister</a></h3>
-	                <p>Know all about the today's Oath</p>
-	                <a href="Blogs/oath_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/oath_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/oath_blog.html" target="_blank">Narendra Modi to Take Oath for Third Term as Prime Minister</a></h3>
+                    <p>Know all about the today's Oath</p>
+                    <a href="Blogs/oath_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/kangana_blog.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/kangana_blog.html" target="_blank">Action Intensifies Against Kulwinder Kaur</a></h3>
-	                <p>Know all about tha trending debate between Kangana and Kulwinder </p>
-	                <a href="Blogs/kangana_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/kangana_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/kangana_blog.html" target="_blank">Action Intensifies Against Kulwinder Kaur</a></h3>
+                    <p>Know all about tha trending debate between Kangana and Kulwinder</p>
+                    <a href="Blogs/kangana_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/neet_scam.png" alt="Blog Post 1">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/neet_scam.html" target="_blank">Latest News on NEET UG 2024: Allegations and Controversies</a></h3>
-	                <p>All about NEET-UG 2024 controversy</p>
-	                <a href="Blogs/neet_scam.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
-	        <div class="blog-post">
-	            <img src="assets/images/blog/lok_sabha1.jpg" alt="Blog Post 2">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/Lok_Sabha.html" target="_blank">Lok Sabha Election 2024: A Closer Look at the Results</a></h3>
-	                <p>The much-anticipated 2024 Lok Sabha elections have concluded, marking another pivotal moment in India's democratic journey.</p>
-	                <a href="Blogs/Lok_Sabha.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
+                <img src="assets/images/blog/neet_scam.png" alt="Blog Post 1">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/neet_scam.html" target="_blank">Latest News on NEET UG 2024: Allegations and Controversies</a></h3>
+                    <p>All about NEET-UG 2024 controversy</p>
+                    <a href="Blogs/neet_scam.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
-	            <img src="assets/images/blog/favicon.jpg" alt="Blog Post 1">
-	            <div class="blog-post-content">
-	                <h3><a href="Blogs/collegers_blog.html" target="_blank">All about Collegers</a></h3>
-	                <p>All about Collegers.in their History, Vision, Aim, Goal, Slogan...</p>
-	                <a href="Blogs/collegers_blog.html" target="_blank">Read More</a>
-	            </div>
-	        </div>
-	    </section>
-	</div>
+                <img src="assets/images/blog/lok_sabha1.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/Lok_Sabha.html" target="_blank">Lok Sabha Election 2024: A Closer Look at the Results</a></h3>
+                    <p>The much-anticipated 2024 Lok Sabha elections have concluded, marking another pivotal moment in India's democratic journey.</p>
+                    <a href="Blogs/Lok_Sabha.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="blog-post">
+                <img src="assets/images/blog/favicon.jpg" alt="Blog Post 1">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/collegers_blog.html" target="_blank">All about Collegers</a></h3>
+                    <p>All about Collegers.in their History, Vision, Aim, Goal, Slogan...</p>
+                    <a href="Blogs/collegers_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
+            <div class="navigation-buttons">
+                <button id="prev-button" onclick="navigateBlogs('prev')">Previous</button>
+                <button id="next-button" onclick="navigateBlogs('next')">Next</button>
+            </div>
+        </section>
+    </div>
 
-    <footer class="footer">
-        <p>&copy; 2024 Collegers. All rights reserved.</p>
-    </footer>
-
-    <!-- Javascript -->          
     <script src="assets/plugins/jquery-3.3.1.min.js"></script>
-    <script src="assets/plugins/popper.min.js"></script> 
-    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script> 
-
-    <!-- Style Switcher (REMOVE ON YOUR PRODUCTION SITE) -->
-    <script src="assets/js/demo/style-switcher.js"></script>     
-    
+    <script src="assets/plugins/popper.min.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/demo/style-switcher.js"></script>
     <script>
+        let currentPage = 0;
+        const blogsPerPage = 9;
+        const blogPosts = document.querySelectorAll('.blog-post');
+
+        function showBlogs(page) {
+            const start = page * blogsPerPage;
+            const end = start + blogsPerPage;
+            blogPosts.forEach((post, index) => {
+                post.style.display = (index >= start && index < end) ? 'flex' : 'none';
+            });
+
+            document.getElementById('prev-button').style.display = page === 0 ? 'none' : 'inline-block';
+            const totalPages = Math.ceil(blogPosts.length / blogsPerPage);
+            document.getElementById('next-button').style.display = page === totalPages - 1 ? 'none' : 'inline-block';
+        }
+
+        function navigateBlogs(direction) {
+            const totalPages = Math.ceil(blogPosts.length / blogsPerPage);
+            if (direction === 'next' && currentPage < totalPages - 1) {
+                currentPage++;
+            } else if (direction === 'prev' && currentPage > 0) {
+                currentPage--;
+            }
+            showBlogs(currentPage);
+        }
+
+        showBlogs(currentPage);
+
         document.getElementById('search-input').addEventListener('input', function() {
             const searchQuery = this.value.toLowerCase();
-            const blogPosts = document.querySelectorAll('.blog-post');
-            
             blogPosts.forEach(post => {
                 const title = post.querySelector('.blog-post-content h3').textContent.toLowerCase();
                 const description = post.querySelector('.blog-post-content p').textContent.toLowerCase();
-                
                 if (title.includes(searchQuery) || description.includes(searchQuery)) {
                     post.style.display = 'flex';
                 } else {
