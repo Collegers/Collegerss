@@ -110,8 +110,7 @@
         .navigation-buttons button:hover {
             background-color: #088f12;
         }
-
-           </style>
+    </style>
 </head>
 <body>
     <header class="header text-center">
@@ -149,11 +148,9 @@
     <div class="main-wrapper">
         <section class="cta-section theme-bg-light py-5">
             <div class="container text-center">
-                <h2 class="heading">Collegers - A Blog Site Made For Millions of lives </h2>
+                <h2 class="heading">Collegers - A Blog Site Made For Millions of lives</h2>
                 <div class="intro">We try to give news ASAP.</div>
             </div>
-
-
         </section>
         <div class="search-bar">
             <form id="search-form">
@@ -162,6 +159,14 @@
             </form>
         </div>
         <section class="content container">
+            <div class="blog-post">
+                <img src="assets/images/blog/cricket_blog.jpg" alt="Blog Post 2">
+                <div class="blog-post-content">
+                    <h3><a href="Blogs/cricket_blog.html" target="_blank">India Wins the T20 World Cup: A Night to Remember</a></h3>
+                    <p>Know all about the recent event</p>
+                    <a href="Blogs/cricket_blog.html" target="_blank">Read More</a>
+                </div>
+            </div>
             <div class="blog-post">
                 <img src="assets/images/blog/roof_collapsed.jpg" alt="Blog Post 2">
                 <div class="blog-post-content">
@@ -279,17 +284,12 @@
                 <button id="next-button" onclick="navigateBlogs('next')">Next</button>
             </div>
         </section>
-
-        <button id="theme-toggle">
-            <i class="fas fa-sun toggle-icon"></i>
-        </button>
     </div>
 
     <script src="assets/plugins/jquery-3.3.1.min.js"></script>
     <script src="assets/plugins/popper.min.js"></script>
     <script src="assets/plugins/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/demo/style-switcher.js"></script>
-    <script src="button.js"></script>
     <script>
         let currentPage = 0;
         const blogsPerPage = 9;
@@ -332,31 +332,5 @@
             });
         });
     </script>
-
-<script>
-    document.addEventListener('DOMContentLoaded', (event) => {
-        const themeToggleBtn = document.getElementById('theme-toggle');
-        const currentTheme = localStorage.getItem('theme');
-        const icon = themeToggleBtn.querySelector('.toggle-icon');
-
-        if (currentTheme === 'dark') {
-            document.body.classList.add('dark-mode');
-            icon.classList.replace('fa-sun', 'fa-moon');
-        }
-
-        themeToggleBtn.addEventListener('click', () => {
-            document.body.classList.toggle('dark-mode');
-            let theme = 'light';
-            if (document.body.classList.contains('dark-mode')) {
-                theme = 'dark';
-                icon.classList.replace('fa-sun', 'fa-moon');
-            } else {
-                icon.classList.replace('fa-moon', 'fa-sun');
-            }
-            localStorage.setItem('theme', theme);
-        });
-    });
-</script>
-
 </body>
 </html>
