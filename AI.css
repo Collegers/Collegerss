@@ -1,0 +1,48 @@
+/* Chatbot Button Styles */
+.chatbot-link {
+    position: fixed; /* Makes it sticky */
+    bottom: 20px; /* Distance from the bottom */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* Ensures it appears above most elements */
+    display: flex; /* Aligns the icon and label properly */
+    align-items: center;
+    gap: 10px; /* Space between the icon and the label */
+    background-color: #d40000; /* Background color of the button */
+    padding: 3px 5px; /* Adds space inside the button */
+    border-radius: 50px; /* Rounds the button edges */
+    box-shadow: 0 16px 30px rgba(0, 0, 0, 0.2); /* Adds shadow for a modern look */
+    cursor: pointer; /* Pointer cursor on hover */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from the link */
+    font-family: Arial, sans-serif; /* Font style */
+    font-size: 14px; /* Text size */
+    transition: all 0.3s ease; /* Smooth hover effect */
+}
+
+/* Chatbot Icon (Circle) */
+.chatbot-link img {
+    width: 80px; /* Icon size */
+    height: 80px; /* Icon size */
+    border-radius: 50%; /* Makes the image circular */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect for Desktop Users */
+.chatbot-link:hover {
+    background-color: #005bb5; /* Darker blue on hover */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.chatbot-link img:hover {
+    transform: scale(1.1); /* Slight zoom effect on the icon */
+}
+
+/* Chatbot Label for Text */
+.chatbot-link span {
+    display: inline-block; /* Ensures proper spacing */
+}
+
+/* Mobile-Friendly Tap Animation */
+.chatbot-link:active {
+    transform: scale(0.95); /* Slightly shrink on tap for mobile users */
+}
