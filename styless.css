@@ -45,7 +45,7 @@ body {
     bottom: 0; 
     width: 100%; 
     background-color: gray; 
-    color: white; 
+    color: rgb(0, 0, 0); 
     text-align: center;
     padding: 10px 0;
 }
